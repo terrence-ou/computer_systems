@@ -13,6 +13,6 @@ int main(){
 }
 
 int32_t div16(int32_t x){
-  int32_t bias = (((x >> 31) & 1) << 4) - (x >> 31);
+  int32_t bias = (x >> 31) & 0xF;
   return (x + bias) >> 4;
 }
