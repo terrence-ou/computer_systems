@@ -10,5 +10,5 @@ int main() {
 int int_shifts_are_arithmetic() {
     unsigned x = 0xF0000000;
     unsigned shift = x >> 8;
-    return shift >> 31;
+    return (shift >> 31) != 0;
 }
